@@ -30,15 +30,10 @@ def optimize_line(frame, lines):
         else:
             right_fit.append((slope, inpt))
 
-    if len(left_fit) != 0 :
-        left_fit_avg = np.average(left_fit, axis = 0)
-    else :
-        left_fit_avg = [-1.70816864, 1273.71047431]
-    if len(left_fit) != 0 :
-        right_fit_avg = np.average(right_fit, axis = 0)
-    else :
-        right_fit_avg = [1, -300]
-    #print(right_fit_avg)
+    
+    left_fit_avg = np.average(left_fit, axis = 0)
+    right_fit_avg = np.average(right_fit, axis = 0)
+    
     left_slope = left_fit_avg[0]
     left_inpt = left_fit_avg[1]
     left_y1 = frame.shape[0]
